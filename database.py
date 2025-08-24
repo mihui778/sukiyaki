@@ -9,6 +9,6 @@ engine = create_engine(sqlite_url, connect_args=connect_args)
 Session = sessionmaker(bind=engine)
 
 
-async def get_session():
+def get_session():
     with Session() as session:
         yield session

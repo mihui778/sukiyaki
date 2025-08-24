@@ -17,6 +17,10 @@ class OrmCategory(Base):
         unique=True,
         index=True
     )
+    products = relationship(
+        "OrmProduct",
+        back_populates="category"
+    )
 
 
 class OrmProduct(Base):
